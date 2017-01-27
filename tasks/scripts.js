@@ -10,6 +10,5 @@ gulp.src([
         baseDir + '/assets/js/ie10-viewport-bug-workaround.js'
     ])
     .pipe(concat('index.js'))
-    // todo: minify JS
-    //.pipe()
+    .pipe(uglify())
     .pipe(gulp.dest('dist/optimised/'));
